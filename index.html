@@ -1,17 +1,63 @@
-<!--Colours: #3a3a3a #ff6347 #ffc04a-->
 
-<!--enquiries@restall.io-->
+<!DOCTYPE html>
 
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+
+    <!-- Set the viewport width to device width for mobile -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link rel="stylesheet" href="main.css">
+
+    <title>Restall Consulting - Conor Restall</title>
+
+</head>
+
+<body>
+
+<header>
+    <h1 class="logo">
+        <img src="small-logo.png" alt="Restall Consulting" />
+    </h1>
+</header>
+
+<h2 class="name">Conor Restall</h2>
+
+<h3 class="description">
+    Software Development<br />Consulting
+</h3>
+
+<p>Chesterfield, UK</p>
+
+<p class="social">
+    <a class="social-link linkedin" href="https://www.linkedin.com/in/conor-restall-16087346/"><img src="linkedin.png" alt="LinkedIn"/></a>
+    <a class="social-link twitter" href="https://twitter.com/ConorRestall"><img src="twitter.png" alt="Twitter"/></a>
+    <a class="social-link github" href="https://github.com/conorrr"><img src="github.png" alt="GitHub"/></a>
+    <a class="social-link email" href="#" onmouseover="changeLink(this)" onmouseout="resetLink(this)"><img src="email.png" alt="email"/></a>
+</p>
+
+<footer>
+    <p class="legal">
+        Restall Consulting is registered in England with company number 12181716.
+    </p>
+</footer>
 
 <script>
-    if (typeof window === 'undefined') {
-        return true;
+    if (typeof window !== 'undefined') {
+        var hostname = location.hostname;
+        var enquiries = 'enquiries';
+        var at = String.fromCharCode(Math.pow(2,6));
+        var linked = 'mai' + 'lto:' + enquiries + at + hostname;
+        console.log(linked);
+        function changeLink(ele){
+            ele.href = linked;
+        }
+        function resetLink(ele){
+            ele.href = '#'
+        }
     }
-    var hostname = location.hostname;
-    var enquiries = 'enquiries';
-    var at = String.fromCharCode(Math.pow(2,6));
-    var linked = enquiries + at + hostname;
 </script>
 
-<a href="#" onmouseover="changeLink(this)" onmouseout="resetLink(this)">enquiries</a><a href="#" onmouseover="changeLink(this)"
-    onmouseout="resetLink(this)">@</a><a href="#" onmouseover="changeLink(this)" onmouseout="resetLink(this)">restall.io</a>
+</body>
+</html>
