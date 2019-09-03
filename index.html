@@ -1,0 +1,17 @@
+<!--Colours: #3a3a3a #ff6347 #ffc04a-->
+
+<!--enquiries@restall.io-->
+
+
+<script>
+    if (typeof window === 'undefined') {
+        return true;
+    }
+    var hostname = location.hostname;
+    var enquiries = 'enquiries';
+    var at = String.fromCharCode(Math.pow(2,6));
+    var linked = enquiries + at + hostname;
+</script>
+
+<a href="#" onmouseover="changeLink(this)" onmouseout="resetLink(this)">enquiries</a><a href="#" onmouseover="changeLink(this)"
+    onmouseout="resetLink(this)">@</a><a href="#" onmouseover="changeLink(this)" onmouseout="resetLink(this)">restall.io</a>
